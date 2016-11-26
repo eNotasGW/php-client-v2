@@ -94,5 +94,5 @@ eNotasGW::$NFeProdutoApi->emitir($empresaId, array(
 		)
 	),
 	'informacoesAdicionais' => 'Documento emitido por ME ou EPP optante pelo Simples Nacional. Não gera direito a crédito fiscal de IPI.'
-	));
+));
 ~~~
