@@ -7,6 +7,8 @@
 	require('exceptions/unauthorizedException.php');
 
 	require('apiBase.php');
+	require('nfeApiBase.php');
+	
 	require('empresaApi.php');
 	require('nfeServicoApi.php');
 	require('nfeProdutoApi.php');
