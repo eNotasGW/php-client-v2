@@ -18,7 +18,6 @@
 			'id' => '10',
 			'consumidorFinal' => true,
 			'indicadorPresencaConsumidor' => 'OperacaoPelaInternet',
-			
 			'cliente' => array(
 				'nome' => 'Jonathan Souza',
 				'email' => 'jonathan.souza@mail.com',
