@@ -74,19 +74,22 @@
 			$dadosEmpresa->itemListaServicoLC116 = '13.05';
 		}
 		
+		$configProd = $dadosEmpresa['emissaNFeServico']['ambienteProducao'];
+		$configHomologa = $dadosEmpresa['emissaNFeServico']['ambienteHomologacao'];
+		
 		if($caracteristicasPrefeitura->tipoAutenticacao == tipoAutenticacao::UsuarioESenha) {
-			$dadosEmpresa['configuracoesNFSeProducao']['usuarioAcessoProvedor'] = '[usuario]';
-			$dadosEmpresa['configuracoesNFSeProducao']['senhaAcessoProvedor'] = '[senha]';
+			$configProd['usuarioAcessoProvedor'] = '[usuario]';
+			$configProd['senhaAcessoProvedor'] = '[senha]';
 			
 			//opcional, preencher apenas se for emitir em ambiente de homologação
-			$dadosEmpresa['configuracoesNFSeHomologacao']['usuarioAcessoProvedor'] = '[usuario]';
-			$dadosEmpresa['configuracoesNFSeHomologacao']['senhaAcessoProvedor'] = '[senha]'; 
+			$configHomologa['usuarioAcessoProvedor'] = '[usuario]';
+			$configHomologa['senhaAcessoProvedor'] = '[senha]';
 		}
 		else if($caracteristicasPrefeitura->tipoAutenticacao == tipoAutenticacao::Token) {
-			$dadosEmpresa['configuracoesNFSeProducao']['tokenAcessoProvedor'] = '[token]';
+			$configProd['tokenAcessoProvedor'] = '[token]';
 			
 			//opcional, preencher apenas se for emitir em ambiente de homologação
-			$dadosEmpresa['configuracoesNFSeHomologacao']['tokenAcessoProvedor'] = '[token]';
+			$configProd['tokenAcessoProvedor'] = '[token]';
 		}
 	
 		$result = eNotasGW::$EmpresaApi->inserirAtualizar($dadosEmpresa);
