@@ -42,7 +42,7 @@ eNotasGW::$NFeServicoApi->emitir($idEmpresa, array(
 
 $idEmpresa = '484FB0C5-969E-46AD-A047-8A0DB54667B4';
 
-eNotasGW::$NFeProdutoApi->emitir($empresaId, array(
+eNotasGW::$NFeProdutoApi->emitir($idEmpresa, array(
 	// identificador único da requisição de emissão de nota fiscal 
 	// (normalmente será preenchido com o id único do registro no sistema de origem)
 	'id' => '5',
@@ -102,7 +102,7 @@ eNotasGW::$NFeProdutoApi->emitir($empresaId, array(
 
 $idEmpresa = '484FB0C5-969E-46AD-A047-8A0DB54667B4';
 
-$result = eNotasGW::$NFeConsumidorApi->emitir($empresaId, array(
+$result = eNotasGW::$NFeConsumidorApi->emitir($idEmpresa, array(
 	// identificador único da requisição de emissão de nota fiscal 
 	// (normalmente será preenchido com o id único do registro no sistema de origem)
 	'id' => '5',
