@@ -1,5 +1,4 @@
-# php-client-v2
-eNotas GW API client for PHP v2
+# eNotas GW PHP client v2
 
 ~~~
 eNotasGW::configure(array(
