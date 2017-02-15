@@ -7,35 +7,9 @@ eNotasGW::configure(array(
 ~~~
 
 ### Emitindo uma nota fiscal de serviço (NFS-e)
-~~~
+Para emitir NFS-e utilize a versão a API v1 (link abaixo)
 
-$idEmpresa = '484FB0C5-969E-46AD-A047-8A0DB54667B4';
-
-eNotasGW::$NFeServicoApi->emitir($idEmpresa, array(
-	// identificador único da requisição de emissão de nota fiscal 
-	// (normalmente será preenchido com o id único do registro no sistema de origem)
-	'id' => '5',
-	'ambienteEmissao' => 'Homologacao', //'Producao' ou 'Homologacao'
-	'cliente' => array(
-		'nome' => 'Nome Cliente',
-		'email' => 'cliente@mail.com',
-		'cpfCnpj' => '23857396237',
-		'endereco' => array(
-			'uf' => 'MG', 
-			'cidade' => 'Belo Horizonte',
-			'logradouro' => 'Rua 01',
-			'numero' => '112',
-			'complemento' => 'AP 402',
-			'bairro' => 'Savassi',
-			'cep' => '32323111'
-		)
-	),
-	'servico' => array(
-		'descricao' => 'Discriminação do serviço prestado'
-	),
-	'valorTotal' => 10.05
-));
-~~~
+https://github.com/eNotasGW/php-client
 
 ### Emitindo uma nota fiscal de produto (NF-e)
 ~~~
