@@ -14,50 +14,50 @@
 	try
 	{
 		$result = eNotasGW::$NFeConsumidorApi->emitir($idEmpresa, array(
-      // identificador único da requisição de emissão de nota fiscal 
-      // (normalmente será preenchido com o id único do registro no sistema de origem)
-      'id' => '5',
-      'ambienteEmissao' => 'Homologacao', //'Producao' ou 'Homologacao'
-      'pedido' => array(
-        'presencaConsumidor' => 'OperacaoPresencial',
-        'pagamento' => array(
-          'tipo' => 'PagamentoAVista',
-          'formas' => array(
-            array(
-              'tipo' => 'Dinheiro',
-              'valor' => 0.01
-            )
-          )
-        )
-      ),
-
-      'itens' => array(
-        array(
-          'cfop' => '5101',
-          'codigo' => '1',
-          'descricao' => 'Produto XYZ',
-          'ncm' => '49019900',
-          'quantidade' => 1,
-          'unidadeMedida' => 'UN',
-          'valorUnitario' => 1.39,
-          'impostos' => array(
-            'percentualAproximadoTributos' => array(
-              'simplificado' => array(
-                'percentual' => 31.45
-              ),
-              'fonte' => 'IBPT'
-            ),
-            'icms' => array(
-              'situacaoTributaria' => '102',
-              'origem' => 0 //0 - Nacional
-            )
-          )
-        )
-      ),
-      'informacoesAdicionais' => 'Documento emitido por ME ou EPP optante pelo Simples Nacional. Não gera direito a crédito fiscal de IPI.'
-  ));
+		  // identificador único da requisição de emissão de nota fiscal 
+		  // (normalmente será preenchido com o id único do registro no sistema de origem)
+		  'id' => '8',
+		  'ambienteEmissao' => 'Homologacao', //'Producao' ou 'Homologacao'
+		  'pedido' => array(
+			'presencaConsumidor' => 'OperacaoPresencial',
+			'pagamento' => array(
+			  'tipo' => 'PagamentoAVista',
+			  'formas' => array(
+				array(
+				  'tipo' => 'Dinheiro',
+				  'valor' => 0.01
+				)
+			  )
+			)
+		  ),
+		'itens' => array(
+			array(
+			  'cfop' => '5101',
+			  'codigo' => '1',
+			  'descricao' => 'Produto XYZ',
+			  'ncm' => '49019900',
+			  'quantidade' => 1,
+			  'unidadeMedida' => 'UN',
+			  'valorUnitario' => 1.39,
+			  'impostos' => array(
+				'percentualAproximadoTributos' => array(
+				  'simplificado' => array(
+					'percentual' => 31.45
+				  ),
+				  'fonte' => 'IBPT'
+				),
+				'icms' => array(
+				  'situacaoTributaria' => '102',
+				  'origem' => 0 //0 - Nacional
+				)
+			  )
+			)
+		  ),
+		  'informacoesAdicionais' => 'Documento emitido por ME ou EPP optante pelo Simples Nacional. Não gera direito a crédito fiscal de IPI.'
+		));
 		
 		echo 'Sucesso! </br>';
+		echo json_encode($result);
 	}
 	catch(Exceptions\invalidApiKeyException $ex) {
 		echo 'Erro de autenticação: </br></br>';
