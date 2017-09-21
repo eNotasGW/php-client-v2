@@ -24,8 +24,8 @@
 			'email' => null,
 			'telefoneComercial' => '3132323131',
 			'endereco' => array(
-				'uf' => 'MG', 
-				'cidade' => 'Belo Horizonte',
+				'uf' => 'RJ', 
+				'cidade' => 'Rio de Janeiro',
 				'logradouro' => 'Rua 01',
 				'numero' => '112',
 				'complemento' => 'SL 102',
