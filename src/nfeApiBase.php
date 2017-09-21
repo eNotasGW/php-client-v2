@@ -14,7 +14,6 @@
 		 * 
 		 * @param string $idEmpresa id da empresa para a qual a nota será emitida
 		 * @param mixed $dadosNFe dados da NFe a ser emitida
-		 * @return string $nfeId retorna o id único da NFe no eNotas GW
 		 */
 		public function emitir($idEmpresa, $dadosNFe) {
 			$result = $this->callOperation(array(
@@ -29,15 +28,13 @@
 				)
 			));
 
-			//return $result;
-			return $result->nfeId;
+			return $result;
 		}
 		
 		/**
 		 * Cancela uma determinada Nota Fiscal
 		 * @param string $nfeId Identificador Único da Nota Fiscal
 		 * @param string $idEmpresa id da empresa para a qual a nota será emitida
-		 * @return string $nfeId retorna o id único da NFe no eNotas GW
 		 */
 		public function cancelar($idEmpresa, $id) {
 			$result = $this->callOperation(array(
@@ -52,7 +49,7 @@
 				)
 			));
 			
-			return $result->nfeId;
+			return $result;
 		}
 
 		/**
