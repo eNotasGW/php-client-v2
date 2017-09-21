@@ -38,7 +38,7 @@
 					'serieNFe' => '2',
 					'csc' => array(
 						'id' => '0000001', //id do Código de Segurança do Contribuiente (CSC) necessário para emsisão de NFC-e
-						'codigo' => //Código de Segurança do Contribuiente (CSC) necessário para emsisão de NFC-e
+						'codigo' => '800FA97D5C3F4219A89DCE3FCE813A6F' //Código de Segurança do Contribuiente (CSC) necessário para emsisão de NFC-e
 					)
 				),
 				'ambienteHomologacao' => array(
