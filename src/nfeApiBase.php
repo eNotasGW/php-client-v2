@@ -64,7 +64,7 @@
 		 */
 		public function consultar($idEmpresa, $nfeId) {
 			return $this->callOperation(array(
-			  'path' => '/empresas/{empresaId}/{tipoNF}/{id}',
+			  'path' => '/empresas/{empresaId}/{tipoNF}/{nfeId}',
 			  'parameters' => array(
 					'path' => array(
 						'empresaId' => $idEmpresa,
