@@ -142,5 +142,28 @@
 				)
 			));
 		}
+		
+		/**
+		* Download do pdf de uma Nota Fiscal identificada pelo seu id único
+		* 
+		* @param string $idEmpresa id da empresa para a qual a nota será emitida
+		* @param string $id Identificador Único da Nota Fiscal
+		* @return os bytes do arquivo pdf
+		*/
+		public function inutilizarNumeracao($idEmpresa, $dadosInutilizacao) {
+			$result = $this->callOperation(array(
+				'method' => 'POST',
+				'path' => '/empresas/{empresaId}/{tipoNF}/inutilizar',
+				'parameters' => array(
+					'path' => array(
+					  'empresaId' => $idEmpresa,
+					  'tipoNF' => $this->tipoNF
+					),
+					'body' => $dadosInutilizacao
+				)
+			));
+
+			return $result;
+		}
 	}
 ?>
