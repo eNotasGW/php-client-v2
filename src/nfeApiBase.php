@@ -66,7 +66,7 @@
 					'path' => array(
 						'empresaId' => $idEmpresa,
 						'tipoNF' => $this->tipoNF,
-						'nfeId' => $nfeId
+						'id' => $nfeId
 					)
 				)
 			));
@@ -164,6 +164,46 @@
 			));
 
 			return $result;
+		}
+		
+		/**
+		 * Consulta uma Inutilização pelo Identificador Único
+		 * 
+		 * @param string $idEmpresa id da empresa para a qual a nota será emitida
+		 * @param string $idInutilizacao Identificador Único da inutilização
+		 * @return mixed $dadosInutilizacao retorna os dados da inutilização como um array
+		 */
+		public function consultarInutilizacao($idEmpresa, $idInutilizacao) {
+			return $this->callOperation(array(
+			  'path' => '/empresas/{empresaId}/{tipoNF}/inutilizar/{id}',
+			  'parameters' => array(
+					'path' => array(
+						'empresaId' => $idEmpresa,
+						'tipoNF' => $this->tipoNF,
+						'id' => $idInutilizacao
+					)
+				)
+			));
+		}
+		
+		/**
+		* Download do xml de uma Inutilização identificada pelo seu Identificador Único
+		* 
+		* @param string $idEmpresa id da empresa para a qual a nota será emitida
+		* @param string $id Identificador Único da Inutilização
+		* @return string xml da inutilização
+		*/
+		public function downloadXmlInutilizacao($idEmpresa, $id) {
+			return $this->callOperation(array(
+				'path' => '/empresas/{empresaId}/{tipoNF}/inutilizar/{id}/xml',
+				'parameters' => array(
+					'path' => array(
+					  'empresaId' => $idEmpresa,
+					  'tipoNF' => $this->tipoNF,
+					  'id' => $id
+					)
+				)
+			));
 		}
 	}
 ?>
