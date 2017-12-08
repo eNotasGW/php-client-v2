@@ -144,11 +144,11 @@
 		}
 		
 		/**
-		* Download do pdf de uma Nota Fiscal identificada pelo seu id único
+		* Inutiliza uma faixa de numeraço da NF-e / NFC-e
 		* 
-		* @param string $idEmpresa id da empresa para a qual a nota será emitida
-		* @param string $id Identificador Único da Nota Fiscal
-		* @return os bytes do arquivo pdf
+		* @param string $idEmpresa id da empresa para a qual a inutilização será realizada
+		* @param mixed $dadosInutilizacao dados da inutilizacao a ser realizada
+		* 
 		*/
 		public function inutilizarNumeracao($idEmpresa, $dadosInutilizacao) {
 			$result = $this->callOperation(array(
