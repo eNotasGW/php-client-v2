@@ -193,14 +193,14 @@
 		* @param string $id Identificador Único da Inutilização
 		* @return string xml da inutilização
 		*/
-		public function downloadXmlInutilizacao($idEmpresa, $id) {
+		public function downloadXmlInutilizacao($idEmpresa, $idInutilizacao) {
 			return $this->callOperation(array(
 				'path' => '/empresas/{empresaId}/{tipoNF}/inutilizar/{id}/xml',
 				'parameters' => array(
 					'path' => array(
 					  'empresaId' => $idEmpresa,
 					  'tipoNF' => $this->tipoNF,
-					  'id' => $id
+					  'id' => $idInutilizacao
 					)
 				)
 			));
