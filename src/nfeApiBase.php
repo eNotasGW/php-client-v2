@@ -112,6 +112,7 @@
 		public function downloadXml($idEmpresa, $id) {
 			return $this->callOperation(array(
 				'path' => '/empresas/{empresaId}/{tipoNF}/{id}/xml',
+				'decodeResponse' => FALSE,
 				'parameters' => array(
 					'path' => array(
 					  'empresaId' => $idEmpresa,
