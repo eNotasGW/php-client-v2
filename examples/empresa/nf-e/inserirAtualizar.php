@@ -32,7 +32,7 @@
 				'bairro' => 'Savassi',
 				'cep' => '32323111'
 			),
-			'emissaNFeProduto' => {
+			'emissaoNFeProduto' => {
 				'ambienteProducao' => array(
 					'sequencialNFe' => 1,
 					'serieNFe' => '2'
