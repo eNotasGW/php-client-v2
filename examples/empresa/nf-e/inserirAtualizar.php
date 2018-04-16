@@ -1,7 +1,7 @@
 <?php
 	header('Content-Type: text/html; charset=utf-8');
 	
-	require('../src/eNotasGW.php');
+	require('../../../src/eNotasGW.php');
 	
 	use eNotasGW\Api\Exceptions as Exceptions;
 	use eNotasGW\Api\fileParameter as fileParameter;
@@ -32,7 +32,7 @@
 				'bairro' => 'Savassi',
 				'cep' => '32323111'
 			),
-			'emissaoNFeProduto' => {
+			'emissaoNFeProduto' => [
 				'ambienteProducao' => array(
 					'sequencialNFe' => 1,
 					'serieNFe' => '2'
@@ -41,7 +41,7 @@
 					'sequencialNFe' => 1,
 					'serieNFe' => '2'
 				)
-			}
+			]
 		);
 	
 		$result = eNotasGW::$EmpresaApi->inserirAtualizar($dadosEmpresa);
