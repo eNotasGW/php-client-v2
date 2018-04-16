@@ -32,7 +32,7 @@
 				'bairro' => 'Savassi',
 				'cep' => '32323111'
 			),
-			'emissaoNFeProduto' => [
+			'emissaoNFeProduto' => array(
 				'ambienteProducao' => array(
 					'sequencialNFe' => 1,
 					'serieNFe' => '2'
@@ -41,7 +41,7 @@
 					'sequencialNFe' => 1,
 					'serieNFe' => '2'
 				)
-			]
+			)
 		);
 	
 		$result = eNotasGW::$EmpresaApi->inserirAtualizar($dadosEmpresa);
