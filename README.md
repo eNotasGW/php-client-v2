@@ -1,10 +1,10 @@
 # eNotas GW PHP client v2
 
-~~~
+```php
 eNotasGW::configure(array(
 	'apiKey' => '<sua api key>'
 ));
-~~~
+```
 
 ### Emitindo uma nota fiscal de serviço (NFS-e)
 Para emitir NFS-e utilize a versão a API v1 (link abaixo)
@@ -12,8 +12,7 @@ Para emitir NFS-e utilize a versão a API v1 (link abaixo)
 https://github.com/eNotasGW/php-client
 
 ### Emitindo uma nota fiscal de produto (NF-e)
-~~~
-
+```php
 $idEmpresa = '484FB0C5-969E-46AD-A047-8A0DB54667B4';
 
 eNotasGW::$NFeProdutoApi->emitir($idEmpresa, array(
@@ -69,11 +68,10 @@ eNotasGW::$NFeProdutoApi->emitir($idEmpresa, array(
 	),
 	'informacoesAdicionais' => 'Documento emitido por ME ou EPP optante pelo Simples Nacional. Não gera direito a crédito fiscal de IPI.'
 ));
-~~~
+```
 
 ### Emitindo uma nota fiscal de consumidor (NFC-e)
-~~~
-
+```php
 $idEmpresa = '484FB0C5-969E-46AD-A047-8A0DB54667B4';
 
 $result = eNotasGW::$NFeConsumidorApi->emitir($idEmpresa, array(
@@ -119,4 +117,4 @@ $result = eNotasGW::$NFeConsumidorApi->emitir($idEmpresa, array(
 	),
 	'informacoesAdicionais' => 'Documento emitido por ME ou EPP optante pelo Simples Nacional. Não gera direito a crédito fiscal de IPI.'
 ));
-~~~
+```
