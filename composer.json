@@ -1,0 +1,15 @@
+{
+    "name": "enotas/php-client-v2",
+    "description": "eNotas GW API client for PHP v2",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "eNotas Gateway",
+            "email": "suporte@enotasgw.com.br"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
