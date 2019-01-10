@@ -47,8 +47,7 @@
 				'bairro' => 'Savassi',
 				'cep' => '32323111'
 			),
-			
-			'emissaNFeServico' => {
+			'emissaNFeServico' => array(
 				'regimeEspecialTributacao' => '0', //A lista de valores possíveis deve ser obtida pela api de caraterísticas da prefeitura
 				'codigoServicoMunicipal' => '181309901', //código do serviço municipal padrão para emissão de NFS-e
 				'descricaoServico' => 'SERVICO DE SERIGRAFIA / SILK-SCREEN', //Descrição do serviço municipal padrão para emissão de NFS-e (utilizado apenas na impressão da NFS-e) 
@@ -63,7 +62,7 @@
 					'serieNFe' => '2',
 					'sequencialLoteNFe' => 1
 				)
-			}
+			)
 		);
 		
 		if($caracteristicasPrefeitura->usaCNAE) {

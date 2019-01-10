@@ -1,5 +1,14 @@
 # eNotas GW PHP client v2
 
+
+### Instalação
+
+```bash
+composer require enotas/php-client-v2
+```
+
+### Configuração
+
 ```php
 eNotasGW::configure(array(
 	'apiKey' => '<sua api key>'

@@ -1,6 +1,8 @@
 {
     "name": "enotas/php-client-v2",
     "description": "eNotas GW API client for PHP v2",
+    "keywords": ["eNotas", "NF-e", "NFC-e"],
+    "homepage": "https://github.com/eNotasGW/php-client-v2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -11,5 +13,10 @@
     ],
     "require": {
         "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "eNotasGW\\Api\\": "src/"
+        }
     }
 }
